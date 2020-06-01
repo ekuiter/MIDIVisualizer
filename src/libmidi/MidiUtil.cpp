@@ -10,6 +10,7 @@
 
 using namespace std;
 
+#ifndef ntohl
 uint32_t ntohl(uint32_t n) {
     unsigned char *np = (unsigned char *)&n;
 
@@ -18,13 +19,16 @@ uint32_t ntohl(uint32_t n) {
         ((uint32_t)np[2] << 8) |
         (uint32_t)np[3];
 }
+#endif
 
+#ifndef ntohs
 uint16_t ntohs(uint16_t n) {
     unsigned char *np = (unsigned char *)&n;
 
     return ((uint16_t)np[0] << 8) |
         (uint16_t)np[1];
 }
+#endif
 
 unsigned long BigToSystem32(unsigned long x) {
   return ntohl(x);
