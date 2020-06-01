@@ -44,3 +44,7 @@ On Windows, you can compile with MSBuild in your PATH (e.g., in `C:\Program File
     cd build
     cmake .. -G "Visual Studio 15"
     msbuild MIDIVisualizer.sln /p:Configuration=Release
+    
+### Key coloring
+
+In this fork, you can assign different colors to different tracks in the MIDI file (e.g., left and right hand). If you prefer the original major/minor key coloring, you can have a look at this tool, which can convert MIDI files accordingly: [csillag/midiviz-prepare](https://github.com/csillag/midiviz-prepare)
